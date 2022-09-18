@@ -11,7 +11,8 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 abstract contract PriceOFMATICTOUSD{
     AggregatorV3Interface priceFeed;
     // 18 decimals
-    uint256 requiredPriceInUsd = 1015 * 1e18 ;
+    uint256 requiredPriceInUsd = 1015 * 1e15 ;
+    //price is 0.1015 dollars this is make it affordable on Mumbai
 
     constructor() {
         priceFeed = AggregatorV3Interface(0xd0D5e3DB44DE05E9F294BB0a3bEEaF030DE24Ada);
